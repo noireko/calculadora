@@ -49,6 +49,69 @@ btn8.addEventListener("click", () => {
   }
 });
 
+btn9.addEventListener("click", () => {
+  pantalla.textContent += "9";
+  if (operator === "") {
+    num1 += "9";
+  } else {
+    num2 += "9";
+  }
+});
+
+btn4.addEventListener("click", () => {
+  pantalla.textContent += "4";
+  if (operator === "") {
+    num1 += "4";
+  } else {
+    num2 += "4";
+  }
+});
+
+btn5.addEventListener("click", () => {
+  pantalla.textContent += "5";
+  if (operator === "") {
+    num1 += "5";
+  } else {
+    num2 += "5";
+  }
+});
+
+btn6.addEventListener("click", () => {
+  pantalla.textContent += "6";
+  if (operator === "") {
+    num1 += "6";
+  } else {
+    num2 += "6";
+  }
+});
+
+btn1.addEventListener("click", () => {
+  pantalla.textContent += "1";
+  if (operator === "") {
+    num1 += "1";
+  } else {
+    num2 += "1";
+  }
+});
+
+btn2.addEventListener("click", () => {
+  pantalla.textContent += "2";
+  if (operator === "") {
+    num1 += "2";
+  } else {
+    num2 += "2";
+  }
+});
+
+btn3.addEventListener("click", () => {
+  pantalla.textContent += "3";
+  if (operator === "") {
+    num1 += "3";
+  } else {
+    num2 += "3";
+  }
+});
+
 btnSuma.addEventListener("click", () => {
   pantalla.textContent += "+";
   operator = "+";
