@@ -27,3 +27,26 @@ main {
     height: 80px;
     width: 450px;
 }
+
+.contenedor-botones {
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.botones {}
+
+.botones div,
+.operadores div {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+.botones div {
+    background-color: aquamarine;
+}
+
+.operadores div {
+    background-color: blue;
+}
