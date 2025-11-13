@@ -64,6 +64,11 @@ btnDiv.addEventListener("click", () => {
     operator = "/";
 })
 
+btnMulti.addEventListener("click", () => {
+    pantalla.textContent += "*";
+    operator = "*";
+})
+
 btnIgual.addEventListener("click", () => {
     pantalla.textContent = "";
   operate(Number(num1), Number(num2));
