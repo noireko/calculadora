@@ -26,3 +26,17 @@ function multi(num1, num2) {
 function div(num1, num2) {
     return num1 / num2
 }
+
+function operate(num1, num2) {
+    if (operator == "+") {
+        return suma(num1, num2)
+    } else if (operator == "-") {
+        return resta(num1, num2)
+    } else if (operator == "*") {
+        return multi(num1, num2)
+    } else {
+        return div(num1, num2)
+    }
+}
+
+operate(num1, num2)
