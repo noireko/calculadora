@@ -13,13 +13,19 @@ body {
 main {
     background-color: bisque;
     width: 500px;
-    height: 800px;
+    height: 100%;
+}
+
+.contenedor-calcu {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
 }
 
 .contenedor-pantalla {
     display: flex;
     justify-content: center;
-    padding: 50px;
+    padding: 20px;
 }
 
 .pantalla {
@@ -32,21 +38,33 @@ main {
     height: 100%;
     width: 100%;
     background-color: antiquewhite;
+    display:flex;
 }
 
-.botones {}
+.botones {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-.botones div,
-.operadores div {
-    height: 50px;
-    width: 50px;
+.operadores {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.botones button,
+.operadores button {
+    height: 90px;
+    width: 90px;
     margin: 10px;
+    font-size: 30px;
 }
 
-.botones div {
+.botones button {
     background-color: aquamarine;
 }
 
-.operadores div {
+.operadores button {
     background-color: blue;
 }
