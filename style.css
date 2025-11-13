@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    background-color: bisque;
+    background-color: rgb(49, 49, 49);
     width: 500px;
     height: 100%;
 }
@@ -37,7 +37,7 @@ main {
 .contenedor-botones {
     height: 100%;
     width: 100%;
-    background-color: antiquewhite;
+    background-color: rgb(70, 70, 70);
     display:flex;
 }
 
@@ -62,9 +62,10 @@ main {
 }
 
 .botones button {
-    background-color: aquamarine;
+    background-color: rgb(99, 107, 104);
 }
 
 .operadores button {
-    background-color: blue;
+    background-color: rgb(43, 43, 46);
 }
+
