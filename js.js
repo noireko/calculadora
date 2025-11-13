@@ -22,7 +22,7 @@ const btn3 = document.querySelector(".tres");
 const btnSuma = document.querySelector(".suma");
 const btnResta = document.querySelector(".resta");
 const btnMulti = document.querySelector(".multi");
-const btnDiv = document.querySelector(".div");
+const btnDiv = document.querySelector(".divid");
 
 const btnIgual = document.querySelector(".resultado");
 const pantalla = document.querySelector(".pantalla");
@@ -55,19 +55,14 @@ btnSuma.addEventListener("click", () => {
 });
 
 btnResta.addEventListener("click", () => {
-  pantalla.textContent += "-";
-  operator = "-";
-});
-
-btnMulti.addEventListener("click", () => {
-  pantalla.textContent += "*";
-  operator = "*";
-});
+    pantalla.textContent += "-";
+    operator = "-";
+})
 
 btnDiv.addEventListener("click", () => {
-  pantalla.textContent += "/";
-  operator = "/";
-});
+    pantalla.textContent += "/";
+    operator = "/";
+})
 
 btnIgual.addEventListener("click", () => {
     pantalla.textContent = "";
