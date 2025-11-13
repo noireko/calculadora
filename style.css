@@ -32,6 +32,8 @@ main {
     background-color: rgb(37, 37, 37);
     height: 80px;
     width: 450px;
+    font-size: 30px;
+    color: white;
 }
 
 .contenedor-botones {
