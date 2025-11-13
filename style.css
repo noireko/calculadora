@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     display: flex;
     justify-content: center;
@@ -25,32 +27,37 @@ main {
 .contenedor-pantalla {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    margin: 20px;
 }
 
 .pantalla {
     background-color: rgb(37, 37, 37);
     height: 80px;
-    width: 450px;
-    font-size: 30px;
+    width: 480px;
+    font-size: 50px;
     color: white;
+    font-family: "Share Tech Mono", monospace;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
 }
 
 .contenedor-botones {
     height: 100%;
     width: 100%;
     background-color: rgb(70, 70, 70);
-    display:flex;
+    display: flex;
 }
 
 .botones {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .operadores {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -70,4 +77,3 @@ main {
 .operadores button {
     background-color: rgb(43, 43, 46);
 }
-
