@@ -7,39 +7,97 @@
    3- Usar condicionales para saber operacion hacer
    4- Dar el resultado con alert() */
 
-const btn7 = document.querySelector(".siete")
-const pantalla = document.querySelector(".pantalla")
+const btn7 = document.querySelector(".siete");
+const btn8 = document.querySelector(".ocho");
+const btn9 = document.querySelector(".nueve");
+
+const btn4 = document.querySelector(".cuatro");
+const btn5 = document.querySelector(".cinco");
+const btn6 = document.querySelector(".seis");
+
+const btn1 = document.querySelector(".uno");
+const btn2= document.querySelector(".dos");
+const btn3 = document.querySelector(".tres");
+
+const btnSuma = document.querySelector(".suma");
+const btnResta = document.querySelector(".resta");
+const btnMulti = document.querySelector(".multi");
+const btnDiv = document.querySelector(".div");
+
+const btnIgual = document.querySelector(".resultado");
+const pantalla = document.querySelector(".pantalla");
+
+let num1 = "";
+let num2 = "";
+let operator = "";
 
 btn7.addEventListener("click", () => {
   pantalla.textContent += "7";
+  if (operator === "") {
+    num1 += "7";
+  } else {
+    num2 += "7";
+  }
+});
+
+btn8.addEventListener("click", () => {
+  pantalla.textContent += "8";
+  if (operator === "") {
+    num1 += "8";
+  } else {
+    num2 += "8";
+  }
+});
+
+btnSuma.addEventListener("click", () => {
+  pantalla.textContent += "+";
+  operator = "+";
+});
+
+btnResta.addEventListener("click", () => {
+  pantalla.textContent += "-";
+  operator = "-";
+});
+
+btnMulti.addEventListener("click", () => {
+  pantalla.textContent += "*";
+  operator = "*";
+});
+
+btnDiv.addEventListener("click", () => {
+  pantalla.textContent += "/";
+  operator = "/";
+});
+
+btnIgual.addEventListener("click", () => {
+    pantalla.textContent = "";
+  operate(Number(num1), Number(num2));
 });
 
 function suma(num1, num2) {
-   return num1 + num2
+  return num1 + num2;
 }
 
 function resta(num1, num2) {
-    return num1 - num2
+  return num1 - num2;
 }
 
 function multi(num1, num2) {
-    return num1 * num2
+  return num1 * num2;
 }
 
 function div(num1, num2) {
-    return num1 / num2
+  return num1 / num2;
 }
 
 function operate(num1, num2) {
-    if (operator == "+") {
-        return suma(num1, num2)
-    } else if (operator == "-") {
-        return resta(num1, num2)
-    } else if (operator == "*") {
-        return multi(num1, num2)
-    } else {
-        return div(num1, num2)
-    }
+  if (operator === "+") {
+    pantalla.textContent += suma(num1, num2);
+  } else if (operator === "-") {
+    pantalla.textContent += resta(num1, num2);
+  } else if (operator === "*") {
+    pantalla.textContent += multi(num1, num2);
+  } else if (operator === "/") {
+    pantalla.textContent += div(num1, num2);
+  }
 }
-
-operate(num1, num2)
