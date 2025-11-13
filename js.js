@@ -7,9 +7,12 @@
    3- Usar condicionales para saber operacion hacer
    4- Dar el resultado con alert() */
 
-let num1 = Number(prompt("Introduzca el primer número: "));
-let num2 = Number(prompt("Introduzca el segundo número: "));
-let operator = prompt("Qué quiere hacer con estos numeros?: ").toLowerCase();
+const btn7 = document.querySelector(".siete")
+const pantalla = document.querySelector(".pantalla")
+
+btn7.addEventListener("click", () => {
+  pantalla.textContent += "7";
+});
 
 function suma(num1, num2) {
    return num1 + num2
