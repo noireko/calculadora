@@ -134,11 +134,11 @@ btnMulti.addEventListener("click", () => {
 })
 
 btnIgual.addEventListener("click", () => {
-    pantalla.textContent = "";
-    operate(Number(num1), Number(num2));
-    num1 = "";
+    const resultado = operate(Number(num1), Number(num2));
+    pantalla.textContent = resultado;
+    num1 = String(resultado);
     num2 = "";
-    operador = "";
+    operator = "";
 });
 
 btnBorrar.addEventListener("click", () => {
@@ -166,13 +166,12 @@ function div(num1, num2) {
 
 function operate(num1, num2) {
     if (operator === "+") {
-        pantalla.textContent += suma(num1, num2);
-        num1 += suma(num1, num2);
+        return suma(num1, num2);
     } else if (operator === "-") {
-        pantalla.textContent += resta(num1, num2);
+        return resta(num1, num2);
     } else if (operator === "*") {
-        pantalla.textContent += multi(num1, num2);
+        return multi(num1, num2);
     } else if (operator === "/") {
-        pantalla.textContent += div(num1, num2);
+        return div(num1, num2);
     }
 }
