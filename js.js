@@ -19,6 +19,8 @@ const btn1 = document.querySelector(".uno");
 const btn2 = document.querySelector(".dos");
 const btn3 = document.querySelector(".tres");
 
+const btn0 = document.querySelector(".cero");
+
 const btnPunto = document.querySelector(".punto");
 
 const btnSuma = document.querySelector(".suma");
@@ -112,6 +114,15 @@ btn3.addEventListener("click", () => {
         num1 += "3";
     } else {
         num2 += "3";
+    }
+});
+
+btn0.addEventListener("click", () => {
+    pantalla.textContent += "0";
+    if (operator === "") {
+        num1 += "0";
+    } else {
+        num2 += "0";
     }
 });
 
