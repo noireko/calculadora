@@ -7,13 +7,25 @@
 /* DARK MODE / LIGHT MODE */
 
 :root {
-    --bg: #ffffff;
-    --text: #000000;
+    --main-bg: rgb(230, 230, 230);
+    --pantalla-bg: rgb(240, 240, 240);
+    --pantalla-text: rgb(20, 20, 20);
+
+    --teclas-bg: rgb(210, 210, 210);
+    --operadores-bg: rgb(170, 170, 170);
+
+    --text-color: black;
 }
 
 .dark {
-    --bg: #1e1e1e;
-    --text: #ffffff;
+    --main-bg: rgb(49, 49, 49);
+    --pantalla-bg: rgb(37, 37, 37);
+    --pantalla-text: white;
+
+    --teclas-bg: rgb(99, 107, 104);
+    --operadores-bg: rgb(43, 43, 46);
+
+    --text-color: white;
 }
 
 body {
