@@ -120,3 +120,14 @@ main {
 .operadores button {
     background-color: var(--operadores-bg);
 }
+
+.botonPip {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pipe {
+    height: 50px;
+    width: auto;
+}
