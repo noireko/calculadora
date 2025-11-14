@@ -32,6 +32,8 @@ const btnIgual = document.querySelector(".resultado");
 const pantalla = document.querySelector(".pantalla");
 const btnBorrar = document.querySelector(".borrar")
 
+const toggleTheme = document.querySelector(".toggleTheme");
+
 let num1 = "";
 let num2 = "";
 let operator = "";
