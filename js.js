@@ -30,6 +30,7 @@ const pantalla = document.querySelector(".pantalla");
 let num1 = "";
 let num2 = "";
 let operator = "";
+let resultado = operate(num1, num2);
 
 btn7.addEventListener("click", () => {
   pantalla.textContent += "7";
@@ -135,6 +136,10 @@ btnMulti.addEventListener("click", () => {
 btnIgual.addEventListener("click", () => {
     pantalla.textContent = "";
   operate(Number(num1), Number(num2));
+  num1 = "";
+  num2 = "";
+  operador = "";
+  num1 = resultado;
 });
 
 function suma(num1, num2) {
