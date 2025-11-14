@@ -4,7 +4,30 @@
     box-sizing: border-box;
 }
 
+/* DARK MODE / LIGHT MODE */
 
+:root {
+    --bg: #ffffff;
+    --text: #000000;
+}
+
+.dark {
+    --bg: #1e1e1e;
+    --text: #ffffff;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.calculadora {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* CALCULATOR */
 
 body {
     display: flex;
@@ -78,6 +101,7 @@ main {
     width: 90px;
     font-size: 30px;
     margin: 2px;
+    color: #ffff;
 }
 
 .botones button {
