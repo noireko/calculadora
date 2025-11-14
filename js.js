@@ -19,6 +19,8 @@ const btn1 = document.querySelector(".uno");
 const btn2 = document.querySelector(".dos");
 const btn3 = document.querySelector(".tres");
 
+const btnPunto = document.querySelector(".punto");
+
 const btnSuma = document.querySelector(".suma");
 const btnResta = document.querySelector(".resta");
 const btnMulti = document.querySelector(".multi");
@@ -147,6 +149,28 @@ btnBorrar.addEventListener("click", () => {
     num2 = "";
     operator = "";
 })
+
+btnPunto.addEventListener("click", () => {
+    if (operator === "") {
+        if (num1.includes(".")) return;
+        if (num1 === "") {
+            num1 = "0.";
+            pantalla.textContent += "0.";
+        } else {
+            num1 += ".";
+            pantalla.textContent += ".";
+        }
+    } else {
+        if (num2.includes(".")) return;
+        if (num2 === "") {
+            num2 = "0.";
+            pantalla.textContent += "0.";
+        } else {
+            num2 += ".";
+            pantalla.textContent += ".";
+        }
+    }
+});
 
 function suma(num1, num2) {
     return num1 + num2;
