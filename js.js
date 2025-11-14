@@ -213,12 +213,12 @@ function operate(num1, num2) {
     }
 }
 
-toggleTheme.addEventListener("click", () => {
+cambiarTheme.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 
     if (document.body.classList.contains("dark")) {
-        toggleTheme.textContent = "☀️";
+        cambiarTheme.textContent = "☀️";
     } else {
-        toggleTheme.textContent = "🌙";
+        cambiarTheme.textContent = "🌙";
     }
 });
