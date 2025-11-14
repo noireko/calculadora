@@ -39,8 +39,12 @@ main {
     font-family: "Share Tech Mono", monospace;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: start;
     padding-right: 10px;
+    overflow: scroll;
+    white-space: nowrap; 
+    overflow: hidden;         
+    text-overflow: ellipsis; 
 }
 
 .contenedor-botones {
