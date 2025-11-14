@@ -35,6 +35,9 @@ const btnBorrar = document.querySelector(".borrar")
 const cambiarTheme = document.querySelector(".cambiarTheme");
 const btnBorrarUno = document.querySelector(".borrar1");
 
+const botonPip = document.querySelector(".botonPip");
+const sonidoPip = document.querySelector(".sonidoPip");
+
 let num1 = "";
 let num2 = "";
 let operator = "";
@@ -168,6 +171,7 @@ btnBorrarUno.addEventListener("click", () => {
     borrarUltimo();
 });
 
+
 btnPunto.addEventListener("click", () => {
     if (operator === "") {
         if (num1.includes(".")) return;
@@ -188,6 +192,11 @@ btnPunto.addEventListener("click", () => {
             pantalla.textContent += ".";
         }
     }
+});
+
+botonPip.addEventListener("click", () => {
+    sonidoPip.currentTime = 0;
+    sonidoPip.play();
 });
 
 function suma(num1, num2) {
