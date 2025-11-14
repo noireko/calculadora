@@ -33,6 +33,7 @@ const pantalla = document.querySelector(".pantalla");
 const btnBorrar = document.querySelector(".borrar")
 
 const cambiarTheme = document.querySelector(".cambiarTheme");
+const btnBorrarUno = document.querySelector(".borrar1");
 
 let num1 = "";
 let num2 = "";
@@ -163,6 +164,10 @@ btnBorrar.addEventListener("click", () => {
     operator = "";
 })
 
+btnBorrarUno.addEventListener("click", () => {
+    borrarUltimo();
+});
+
 btnPunto.addEventListener("click", () => {
     if (operator === "") {
         if (num1.includes(".")) return;
@@ -210,6 +215,21 @@ function operate(num1, num2) {
         return multi(num1, num2);
     } else if (operator === "/") {
         return div(num1, num2);
+    }
+}
+
+function borrarUltimo() {
+    if (operator === "") {
+        num1 = num1.slice(0, -1);
+        pantalla.textContent = pantalla.textContent.slice(0, -1);
+    } 
+    else if (num2 === "") {
+        operator = "";
+        pantalla.textContent = pantalla.textContent.slice(0, -1);
+    } 
+    else {
+        num2 = num2.slice(0, -1);
+        pantalla.textContent = pantalla.textContent.slice(0, -1);
     }
 }
 
