@@ -21,7 +21,7 @@ main {
 .contenedor-calcu {
     height: 100%;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
 }
 
 .contenedor-pantalla {
@@ -44,30 +44,36 @@ main {
 }
 
 .contenedor-botones {
-    height: 100%;
+    height: 510px;
     width: 100%;
     background-color: rgb(70, 70, 70);
     display: flex;
+
 }
 
 .botones {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0;
+    align-content: flex-start;
 }
 
 .operadores {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    
+    align-content: flex-start;
+    margin: 0;
 }
+
 
 .botones button,
 .operadores button {
     height: 90px;
     width: 90px;
-    margin: 10px;
     font-size: 30px;
+    margin: 2px;
 }
 
 .botones button {
