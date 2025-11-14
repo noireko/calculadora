@@ -32,7 +32,7 @@ const btnIgual = document.querySelector(".resultado");
 const pantalla = document.querySelector(".pantalla");
 const btnBorrar = document.querySelector(".borrar")
 
-const toggleTheme = document.querySelector(".toggleTheme");
+const cambiarTheme = document.querySelector(".cambiarTheme");
 
 let num1 = "";
 let num2 = "";
@@ -212,3 +212,13 @@ function operate(num1, num2) {
         return div(num1, num2);
     }
 }
+
+toggleTheme.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+        toggleTheme.textContent = "☀️";
+    } else {
+        toggleTheme.textContent = "🌙";
+    }
+});
