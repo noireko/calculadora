@@ -16,7 +16,7 @@ const btn5 = document.querySelector(".cinco");
 const btn6 = document.querySelector(".seis");
 
 const btn1 = document.querySelector(".uno");
-const btn2= document.querySelector(".dos");
+const btn2 = document.querySelector(".dos");
 const btn3 = document.querySelector(".tres");
 
 const btnSuma = document.querySelector(".suma");
@@ -26,96 +26,96 @@ const btnDiv = document.querySelector(".divid");
 
 const btnIgual = document.querySelector(".resultado");
 const pantalla = document.querySelector(".pantalla");
+const btnBorrar = document.querySelector(".borrar")
 
 let num1 = "";
 let num2 = "";
 let operator = "";
-let resultado = operate(num1, num2);
 
 btn7.addEventListener("click", () => {
-  pantalla.textContent += "7";
-  if (operator === "") {
-    num1 += "7";
-  } else {
-    num2 += "7";
-  }
+    pantalla.textContent += "7";
+    if (operator === "") {
+        num1 += "7";
+    } else {
+        num2 += "7";
+    }
 });
 
 btn8.addEventListener("click", () => {
-  pantalla.textContent += "8";
-  if (operator === "") {
-    num1 += "8";
-  } else {
-    num2 += "8";
-  }
+    pantalla.textContent += "8";
+    if (operator === "") {
+        num1 += "8";
+    } else {
+        num2 += "8";
+    }
 });
 
 btn9.addEventListener("click", () => {
-  pantalla.textContent += "9";
-  if (operator === "") {
-    num1 += "9";
-  } else {
-    num2 += "9";
-  }
+    pantalla.textContent += "9";
+    if (operator === "") {
+        num1 += "9";
+    } else {
+        num2 += "9";
+    }
 });
 
 btn4.addEventListener("click", () => {
-  pantalla.textContent += "4";
-  if (operator === "") {
-    num1 += "4";
-  } else {
-    num2 += "4";
-  }
+    pantalla.textContent += "4";
+    if (operator === "") {
+        num1 += "4";
+    } else {
+        num2 += "4";
+    }
 });
 
 btn5.addEventListener("click", () => {
-  pantalla.textContent += "5";
-  if (operator === "") {
-    num1 += "5";
-  } else {
-    num2 += "5";
-  }
+    pantalla.textContent += "5";
+    if (operator === "") {
+        num1 += "5";
+    } else {
+        num2 += "5";
+    }
 });
 
 btn6.addEventListener("click", () => {
-  pantalla.textContent += "6";
-  if (operator === "") {
-    num1 += "6";
-  } else {
-    num2 += "6";
-  }
+    pantalla.textContent += "6";
+    if (operator === "") {
+        num1 += "6";
+    } else {
+        num2 += "6";
+    }
 });
 
 btn1.addEventListener("click", () => {
-  pantalla.textContent += "1";
-  if (operator === "") {
-    num1 += "1";
-  } else {
-    num2 += "1";
-  }
+    pantalla.textContent += "1";
+    if (operator === "") {
+        num1 += "1";
+    } else {
+        num2 += "1";
+    }
 });
 
 btn2.addEventListener("click", () => {
-  pantalla.textContent += "2";
-  if (operator === "") {
-    num1 += "2";
-  } else {
-    num2 += "2";
-  }
+    pantalla.textContent += "2";
+    if (operator === "") {
+        num1 += "2";
+    } else {
+        num2 += "2";
+    }
 });
 
 btn3.addEventListener("click", () => {
-  pantalla.textContent += "3";
-  if (operator === "") {
-    num1 += "3";
-  } else {
-    num2 += "3";
-  }
+    pantalla.textContent += "3";
+    if (operator === "") {
+        num1 += "3";
+    } else {
+        num2 += "3";
+    }
 });
 
 btnSuma.addEventListener("click", () => {
-  pantalla.textContent += "+";
-  operator = "+";
+    pantalla.textContent += "+";
+    operator = "+";
 });
 
 btnResta.addEventListener("click", () => {
@@ -135,37 +135,44 @@ btnMulti.addEventListener("click", () => {
 
 btnIgual.addEventListener("click", () => {
     pantalla.textContent = "";
-  operate(Number(num1), Number(num2));
-  num1 = "";
-  num2 = "";
-  operador = "";
-  num1 = resultado;
+    operate(Number(num1), Number(num2));
+    num1 = "";
+    num2 = "";
+    operador = "";
 });
 
+btnBorrar.addEventListener("click", () => {
+    pantalla.textContent = "";
+    num1 = "";
+    num2 = "";
+    operator = "";
+})
+
 function suma(num1, num2) {
-  return num1 + num2;
+    return num1 + num2;
 }
 
 function resta(num1, num2) {
-  return num1 - num2;
+    return num1 - num2;
 }
 
 function multi(num1, num2) {
-  return num1 * num2;
+    return num1 * num2;
 }
 
 function div(num1, num2) {
-  return num1 / num2;
+    return num1 / num2;
 }
 
 function operate(num1, num2) {
-  if (operator === "+") {
-    pantalla.textContent += suma(num1, num2);
-  } else if (operator === "-") {
-    pantalla.textContent += resta(num1, num2);
-  } else if (operator === "*") {
-    pantalla.textContent += multi(num1, num2);
-  } else if (operator === "/") {
-    pantalla.textContent += div(num1, num2);
-  }
+    if (operator === "+") {
+        pantalla.textContent += suma(num1, num2);
+        num1 += suma(num1, num2);
+    } else if (operator === "-") {
+        pantalla.textContent += resta(num1, num2);
+    } else if (operator === "*") {
+        pantalla.textContent += multi(num1, num2);
+    } else if (operator === "/") {
+        pantalla.textContent += div(num1, num2);
+    }
 }
